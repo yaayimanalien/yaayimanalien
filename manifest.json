@@ -1,15 +1,15 @@
 {
-  "name": "My PWA",
-  "short_name": "PWA",
-  "icons": [
-    {
-      "src": "icon.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
-  "start_url": "https://winter.id.lv",
-  "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#0000ff"
-}
+    "name": "My PWA",
+    "short_name": "PWA",
+    "icons": [
+      {
+        "src": "icon.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "https://winter.id.lv",
+    "display": "standalone",
+    "background_color": "#000000",
+    "theme_color": "#0e0d13"
+  }
