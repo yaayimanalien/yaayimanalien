@@ -5,6 +5,8 @@
       "src": "icon.png",
       "type": "image/png",
       "sizes": "512x512"
-    }
+    },
+    "start_url": "https://winter.id.lv",
+    "display": "standalone"
   ]
 }
