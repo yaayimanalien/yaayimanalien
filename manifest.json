@@ -1,10 +1,10 @@
 {
-  "name": "Test PWA",
+  "name": "My PWA",
   "icons": [
     {
-      "src": "icebear.jpg",
-      "type": "image/jpg",
-      "sizes": "564x564"
+      "src": "icon.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ]
 }
