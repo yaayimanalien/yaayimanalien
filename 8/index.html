@@ -13,7 +13,7 @@
             margin: 20px 0;
         }
         .time {
-            font-size: 1.5rem;
+            font-size: 20px;
         }
 
         #img2, #img3, #img4, #img5 {
@@ -112,12 +112,15 @@
 
         function changeFontSize() {
             const fontSize = document.getElementById("fontSizeDropdown").value;
-            const textElement = document.querySelector(".text");
-            textElement.style.fontSize = fontSize;
+            const textElements = document.querySelectorAll("p");  // Select all <p> elements
+
+            textElements.forEach(function(textElement) {
+                textElement.style.fontSize = fontSize;  // Set the font size for each <p> element
+            });
         }
 
         function cycleImages() {
-            const totalImages = 5; // Total number of images
+            const totalImages = 5;
             const currentImage = document.getElementById("img" + currentImageIndex);
             
             currentImage.style.display = 'none';
