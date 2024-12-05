@@ -1,0 +1,173 @@
+h1{
+    text-align: center;
+    /* font-style: italic; */
+    color: aliceblue;
+    background-color: darkblue;
+    text-transform: uppercase;
+}
+
+h2 {
+    text-align: center;
+    text-transform: capitalize;
+    /* border-top: 1px solid black */
+    text-decoration: overline;
+}
+
+.centrets{
+    text-align: center;
+    font-style: italic;
+    font-variant: small-caps;
+}
+
+.labais{
+    text-align: right;
+    color: rgb(44, 44, 54);
+    text-decoration: underline;
+}
+
+.abas{
+    text-align: justify;
+    letter-spacing: 5px;
+}
+
+#index{
+    background-color: aliceblue;
+}
+
+#saraksti{
+    background-image: url(penguins-of-madagascar.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* #style1{
+    text-align: center;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+#style2{
+    text-align: right;
+
+} */
+
+#tabulas{
+    background: url(penguins-of-madagascar.webp);
+    background-position: right;
+    background-repeat: repeat-y;
+
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#saraksts1{
+    list-style-image: url(penguin_141791.png);
+}
+
+#saraksts2
+{
+    /* .piramis{
+        font-weight: bold;
+        list-style-type: upper-roman
+    } */
+    .otrais{
+        list-style-type: upper-alpha;
+    }
+    font-weight: bold;
+    list-style-type: upper-roman
+}
+
+#saraksts22{
+    list-style-type: upper-alpha;
+    font-weight: normal;
+}
+
+#saraksts11{
+    list-style-image: url(image-removebg-preview.png);
+}
+
+#table1 table, #table1 th, #table1 td {
+    border: 1px solid rgb(0, 0, 204);
+    /* border-collapse: collapse; */
+}
+
+#table1 th{
+    background-color: rgb(0, 0, 204);
+    color: white;
+}
+
+#table1{
+    height: auto;
+    width: 800px;
+    border: 1px blue solid;
+}
+
+#table2{
+    width: 50%;
+    height: auto;
+}
+
+#table2 th, #table2 td{
+    border: 2px red dotted;
+    width: auto;
+}
+
+.apvienots{
+    text-align: center;
+    color: red;
+    text-transform: capitalize;
+    font-weight: bold;
+    text-shadow: 2px 2px 3px black;
+}
+
+.table3{
+    width: 90%;
+    background-color: #ffcc006b;
+    border-collapse: collapse;
+}
+
+.table3 td, .table th {
+    border: none;
+}
+
+#tb3head{
+    width: 100%;
+    height: 30px;
+    /* padding: none;
+    margin: none;
+    border: 0px; */
+    
+    background-color: #ffcc00;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px blue;
+}
+
+#fons {
+    width: 20%;
+    background-image: url("1706868835112 (1).jpeg");
+    background-size: contain;
+    background-repeat: repeat-y;
+}
+
+#footer td, #footer th{
+    border-bottom: none;
+}
+
+.table3 td, .table3 th{
+    border-bottom: 2px solid blue;
+}
+
+.beigu-tabula td, .beigu-tabula th {
+    border: none; 
+    padding: 0;
+}
+
+.beigu-tabula b {
+    text-transform: uppercase;
+    text-align: center;
+}

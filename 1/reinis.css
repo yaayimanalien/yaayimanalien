@@ -1,0 +1,80 @@
+h1{
+    text-align: center;
+    /* font-style: italic; */
+    color: aliceblue;
+    background-color: darkblue;
+    text-transform: uppercase;
+}
+
+h2{
+    text-align: center;
+    text-transform: capitalize;
+    /* border-top: 1px solid black */
+    text-decoration: overline;
+}
+
+.centrets{
+    text-align: center;
+    font-style: italic;
+    font-variant: small-caps;
+}
+
+.labais{
+    text-align: right;
+    color: rgb(44, 44, 54);
+    text-decoration: underline;
+}
+
+.abas{
+    text-align: justify;
+    letter-spacing: 5px;
+}
+
+#index{
+    background-color: aliceblue;
+}
+
+#saraksti{
+    background-image: url(penguins-of-madagascar.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#tabulas{
+    background: url(penguins-of-madagascar.webp);
+    background-position: right;
+    background-repeat: repeat-y;
+
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#saraksts1{
+    list-style-image: url(penguin_141791.png);
+}
+
+#saraksts2
+{
+    /* .piramis{
+        font-weight: bold;
+        list-style-type: upper-roman
+    } */
+    .otrais{
+        list-style-type: upper-alpha;
+    }
+    font-weight: bold;
+    list-style-type: upper-roman
+}
+
+#saraksts22{
+    list-style-type: upper-alpha;
+    font-weight: normal;
+}
+
+#saraksts11{
+    list-style-image: url(image-removebg-preview.png);
+}

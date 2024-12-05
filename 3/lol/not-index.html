@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Layout Assignment</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Task 1 - Centered Blocks */
+        .container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .block {
+            width: 200px;
+            height: 200px;
+            background-color: #f0a500;
+            border: 2px solid #333;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Task 2 - Navigation Links */
+        .navbar {
+            text-align: center;
+            margin-top: 20px;
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        .navbar ul {
+            padding: 0;
+            list-style: none;
+            margin: 0;
+        }
+
+        .navbar li {
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            padding: 10px;
+            background: linear-gradient(45deg, #ff6f61, #ff8e53);
+            color: white;
+            border-radius: 5px;
+        }
+
+        /* Task 3 - Static Sized Blocks */
+        .static-container {
+            max-width: 1000px;
+            margin: 50px auto;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .static-block {
+            width: 250px;
+            height: 150px;
+            background-color: #4CAF50;
+            display: inline-block;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Task 4 - Images with Text Overlay */
+        .image-container {
+            position: relative;
+            width: 300px;
+            margin: 30px auto;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+        }
+
+        .text-overlay {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Task 2: Navigation Links -->
+    <div class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Task 1: Centered Blocks -->
+    <div class="container">
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+    </div>
+
+    <!-- Task 3: Static Sized Blocks -->
+    <div class="static-container">
+        <div class="static-block"></div>
+        <div class="static-block"></div>
+        <div class="static-block"></div>
+    </div>
+
+    <!-- Task 4: Images with Text Overlay -->
+    <div class="image-container">
+        <img src="https://via.placeholder.com/300" alt="Sample Image 1">
+        <div class="text-overlay">Text Overlay 1</div>
+    </div>
+
+    <div class="image-container">
+        <img src="https://via.placeholder.com/300" alt="Sample Image 2">
+        <div class="text-overlay">Text Overlay 2</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1 - Block Layout</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        /* Navbar */
+        .navbar {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .navbar ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        .navbar li {
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        .navbar a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: gold;
+            color: black;
+            text-decoration: none;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Container for blocks */
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            width: 70%;
+            border: 5px solid red;
+            border-radius: 15px;
+            background-color: yellow;
+        }
+
+        /* Block styling */
+        .block {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 3px solid red;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+            background-color: #ffdb58;
+        }
+
+        /* Block hover effect */
+        .block:hover {
+            background-color: #ffcc00;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <ul>
+            <li><a href="#">1. uzdevums</a></li>
+            <li><a href="#">2. uzdevums</a></li>
+            <li><a href="#">3. uzdevums</a></li>
+            <li><a href="#">4. uzdevums</a></li>
+        </ul>
+    </div>
+
+    <!-- Task 1 - Block Layout -->
+    <div class="container">
+        <div class="block">Teksts novietojums blokā ir redzams šeit!!!</div>
+        <div class="block">Teksts 2. blokā.</div>
+        <div class="block">Teksts 3. blokā.</div>
+        <div class="block">Teksts 4. blokā.</div>
+    </div>
+
+</body>
+</html>

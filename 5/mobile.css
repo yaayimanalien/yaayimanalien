@@ -1,0 +1,69 @@
+body {
+    background-color: red; /* test */
+}
+
+.content {
+    width: 90%;
+}
+
+.links {
+    flex-direction: row;
+}
+
+.wrapper {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.links-container {
+    overflow-x: auto; /* Enables horizontal scrolling if content overflows */
+    width: 100%; /* Ensures it spans the full width of the container */
+    padding-bottom: 10px; /* Adds some space below for better usability */
+}
+
+.links {
+    display: flex;
+    flex-direction: row; /* Arrange links horizontally */
+    gap: 10px; /* Space between links */
+    justify-content: flex-start; /* Aligns links to the left */
+    flex-wrap: wrap; /* Allows links to wrap onto a new line if they overflow */
+}
+
+.links a {
+    width: 100px; /* Fixed width for consistency */
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* For screens less than 400px */
+@media only screen and (max-width: 400px) {
+    .wrapper {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .links-container {
+        overflow-x: auto; /* Enables horizontal scrolling */
+        width: 100%; /* Full width of the viewport */
+        padding-bottom: 10px; /* Adds some space below for better usability */
+    }
+
+    .links {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        min-width: max-content; /* Allows links to take their necessary space horizontally */
+    }
+
+    .links a {
+        width: auto; /* Let links adjust based on their content */
+        white-space: nowrap; /* Prevents text from wrapping */
+    }
+}
