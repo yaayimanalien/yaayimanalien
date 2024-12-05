@@ -10,14 +10,34 @@
         background-image: url("icebear.jpg");
         background-repeat: repeat;
       }
+
+      .flex-container {
+        display: flex;
+        flex-direction: column; /* Arrange items in a vertical column */
+        gap: 10px; /* Optional: Space between items */
+        align-items: center; /* Center items horizontally (optional) */
+        padding: 10px; /* Optional: Add some padding */
+        background-color: #f5f5f5; /* Optional: Background color for visibility */
+      }
+
+      .box {
+        padding: 20px;
+        background-color: #0073e6; /* Example color */
+        color: white;
+        text-align: center;
+        border-radius: 5px;
+      }
     </style>
 
     <title>⛄</title>
     
   </head>
-
   
   <body>
     
+    <div class="flex-container">
+      <div class="box"><a href="/7">Item 1</a></div>
+    </div>
+
   </body>
 </html>
