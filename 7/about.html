@@ -42,8 +42,7 @@
 
     <div class="container-fluid">
         <div class="row">
-            <!-- Fixed Width Column -->
-            <div class="col-auto d-none d-lg-block" style="width: 230px; background-color: #f8f9fa;">
+            <div class="col-auto d-none d-lg-block" style="width: 230px;">
                 <div class="text-center p-4">
                     <!-- Profile Picture -->
                     <img src="icebear.jpg" class="img-fluid rounded-circle mb-3" alt="Profile Picture" style="width: 100px; height: 100px; object-fit: cover;">
@@ -74,12 +73,10 @@
                 </div>
             </div>
             
-            <!-- Flexible Width Column -->
             <div class="col">
-                <div class="container mt-4">
+                <div class="container mt-4" style="background-color: #f8f9fa;">
                     <h1 class="mb-4">About Me</h1>
-                    
-                    <!-- About Me Content -->
+
                     <div class="row mb-4">
                         <div class="col-md-6">
                             <img src="img/pic18.jpg" alt="Profile Picture 1" class="img-fluid rounded">
@@ -88,16 +85,15 @@
                             <img src="img/pic20.jpg" alt="Profile Picture 2" class="img-fluid rounded">
                         </div>
                     </div>
-                    
+
                     <div class="mb-4">
                         <h3>About Me</h3>
                         <p>
-                            I am a passionate designer exploring the universe of unknowns. I have a heart of love and an interest in lorem ipsum and mauris necpe quam blog. 
-                            I want to share my world with you. Praesent tincidunt est sed lacus rutrum, porta luctus vitae. Nulla condimentum. 
+                            I am a passionate designer exploring the universe of unknowns. I have a heart of love and an interest in lorem ipsum and mauris necpe quam blog.
+                            I want to share my world with you. Praesent tincidunt est sed lacus rutrum, porta luctus vitae. Nulla condimentum.
                         </p>
                     </div>
-                    
-                    <!-- Technical Skills -->
+
                     <div class="mb-4">
                         <h3>Technical Skills</h3>
                         <div class="mb-2">
@@ -119,17 +115,40 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Download Resume -->
+
                     <div class="text-center">
                         <button class="btn btn-dark" id="downloadResume" data-bs-toggle="modal" data-bs-target="#downloadModal" style="margin-bottom: 20px;">
                             <i class="fas fa-download"></i> Download Resume
                         </button>
                     </div>
+
+                    <div class="contact-form mx-auto mt-5" style="background-color: rgb(158, 158, 158);">
+                        <h3 class="mb-4">Contact Me</h3>
+                        <form id="contactForm">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                                <div class="invalid-feedback">Please enter a valid email address.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                            </div>
+                            <button type="submit" class="btn btn-submit bg-dark text-white w-100" style="margin-bottom: 20px;">
+                                <i class="fa-solid fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
+
             
-            <!-- Modal -->
             <div class="modal fade" id="downloadModal" tabindex="-1" aria-labelledby="downloadModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -146,31 +165,29 @@
                     </div>
                 </div>
             </div>
+
+            
         </div>
 
-            <!-- Footer Section -->
+        
+
     <footer>
         <div class="primary" style="background-color: #808080; color: white;">
-          <!-- Row 1: Contact Info (Email, Phone, Socials) -->
           <div class="row" style="background-color: gray; color: white; height: 80px;">
-            <!-- Email Column -->
             <div class="col-12 col-md-4 d-flex justify-content-center align-items-center">
               <i class="fas fa-envelope me-2"></i>
               <a href="mailto:designer@mail.lv" class="text-white">designer@mail.lv</a>
             </div>
-            <!-- Phone Column -->
             <div class="col-12 col-md-4 d-flex justify-content-center align-items-center">
               <i class="fas fa-phone-alt me-2"></i>
               <a href="tel:+3711234567" class="text-white">+371 1234567</a>
             </div>
-            <!-- Social Media Column -->
             <div class="col-12 col-md-4 text-center d-flex justify-content-center align-items-center">
               <a href="https://linkedin.com" class="text-white mx-2"><i class="fab fa-linkedin fa-2x"></i></a>
               <a href="https://instagram.com" class="text-white mx-2"><i class="fab fa-instagram fa-2x"></i></a>
             </div>
           </div>
       
-          <!-- Row 2: Copyright -->
           <div class="row" style="background-color: black; color: white; height: 80px;">
             <div class="col-12 text-center d-flex justify-content-center align-items-center">
               <p class="mb-0">© All rights reserved, 2024</p>
@@ -180,17 +197,9 @@
       </footer>
 
 
-    <!-- <h1>Hello, world!</h1> -->
 
-    <!-- Optional JavaScript; choose one of the two! -->
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
   </body>
 </html>
