@@ -107,10 +107,13 @@
               <label class="form-check-label" for="terms">
                 I agree to the terms 
                 <!-- Smaller button with modal trigger -->
-                <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#termsModal">
                   ?
                 </button>:<span class="text-danger">*</span>
               </label>
+              <div class="invalid-feedback">
+                You must agree before submitting.
+              </div>
             </div>
           </div>
         </div>
@@ -127,11 +130,11 @@
   </div>
 
   <!-- Modal for Terms and Conditions -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Terms and conditions agreements</h5>
+          <h5 class="modal-title" id="termsModalLabel">Terms and conditions agreements</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
