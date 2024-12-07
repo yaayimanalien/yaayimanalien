@@ -11,6 +11,15 @@
       min-width: 360px;
       margin: 0 auto;
     }
+
+    /* Custom styles for invalid/valid fields */
+    .invalid-field {
+      border-color: red;
+    }
+
+    .valid-field {
+      border-color: green;
+    }
   </style>
 </head>
 <body>
@@ -38,7 +47,7 @@
         <div class="row align-items-center mb-3">
           <label for="confirm-password" class="col-md-4 col-form-label">Confirm your password:<span class="text-danger">*</span></label>
           <div class="col-md-8">
-            <input type="password" class="form-control form-control-sm" id="confirm-password" placeholder="Confirm Password" required>
+            <input type="password" class="form-control form-control-sm" id="confirm-password" placeholder="Confirm Password" required onfocusout="checkPasswords()">
           </div>
         </div>
 
@@ -89,20 +98,24 @@
           </div>
         </div>
 
-        <!-- Terms and Conditions -->
+        <!-- Terms and Conditions Field -->
         <div class="row mb-3">
           <div class="col-md-4"></div>
           <div class="col-md-8">
             <div class="form-check">
               <input class="form-check-input" type="checkbox" id="terms" required>
               <label class="form-check-label" for="terms">
-                I agree to the terms:<span class="text-danger">*</span>
+                I agree to the terms 
+                <!-- Smaller button with modal trigger -->
+                <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  ?
+                </button>:<span class="text-danger">*</span>
               </label>
             </div>
           </div>
         </div>
-
-        <!-- Buttons -->
+        
+        <!-- Submit and Reset Buttons -->
         <div class="row">
           <div class="col-12 d-flex justify-content-between">
             <button type="submit" class="btn btn-primary">Submit</button>
@@ -112,6 +125,59 @@
       </form>
     </div>
   </div>
+
+  <!-- Modal for Terms and Conditions -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Terms and conditions agreements</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>
+            A Terms and Conditions agreement acts as a legal contract between you (the company) and the user. It's where you maintain your rights to exclude users from your app in the event that they abuse your website/app, set out the rules for using your service and note other important details and disclaimers. Having a Terms and Conditions agreement is completely optional. No laws require you to have one. Not even the super-strict and wide-reaching General Data Protection Regulation (GDPR). Your Terms and Conditions agreement will be uniquely yours. While some clauses are standard and commonly seen in pretty much every Terms and Conditions agreement, it's up to you to set the rules and guidelines that the user must agree to. Terms and Conditions agreements are also known as Terms of Service or Terms of Use agreements. These terms are interchangeable, practically speaking. More rarely, it may be called something like an End User Services Agreement (EUSA). You can use this agreement anywhere, regardless of what platform your business operates on:
+          </p>
+          <ul>
+            <li> Websites</li>
+            <li> WordPress blogs or blogs on any kind of platform: Joomla!, Drupal etc.</li>
+            <li> Ecommerce stores</li>
+            <li> Mobile apps</li>
+            <li> etc.</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function checkPasswords() {
+      var password = document.getElementById("password").value;
+      var confirmPassword = document.getElementById("confirm-password").value;
+      var passwordField = document.getElementById("password");
+      var confirmPasswordField = document.getElementById("confirm-password");
+  
+      if (password !== confirmPassword) {
+        // If passwords don't match, highlight both fields in red
+        passwordField.classList.add("invalid-field");
+        confirmPasswordField.classList.add("invalid-field");
+        passwordField.classList.remove("valid-field");
+        confirmPasswordField.classList.remove("valid-field");
+      } else {
+        // If passwords match, highlight both fields in green
+        passwordField.classList.add("valid-field");
+        confirmPasswordField.classList.add("valid-field");
+        passwordField.classList.remove("invalid-field");
+        confirmPasswordField.classList.remove("invalid-field");
+      }
+    }
+  </script>
+  
 </body>
 </html>
