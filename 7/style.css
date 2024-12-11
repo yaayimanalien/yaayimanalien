@@ -12,8 +12,8 @@
     bottom: 0;
     width: 100%;
 } */
-.primary {background-color: #00f; color: #fff;}
-.secondary {background-color: #99f; color: #000;}
+.primary {color: #fff;}
+.secondary {color: #000;}
 /* p {margin: 0; font: 10pt verdana; padding: 15px; text-align: center;} */
 
 .pagination > li > a
@@ -43,4 +43,23 @@ border: none;
 {
 background-color: #000000 !Important;
 border: none;
+}
+
+
+.sidebar-links a:link,
+.sidebar-links a:visited {
+    color: #000;
+}
+
+.sidebar-links a:hover {
+    color: rgb(79, 126, 122);
+}
+
+.sidebar-links a:active {
+    color: #000;
+}
+
+.fa-solid,
+.fas {
+    color: rgb(116, 180, 175);
 }

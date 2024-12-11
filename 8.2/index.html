@@ -12,7 +12,6 @@
       margin: 0 auto;
     }
 
-    /* Custom styles for invalid/valid fields */
     .invalid-field {
       border-color: red;
     }
@@ -27,7 +26,6 @@
     <div class="form-container">
       <h2 class="text-center mb-4">Registration Page</h2>
       <form>
-        <!-- Name Field -->
         <div class="row align-items-center mb-3">
           <label for="name" class="col-md-4 col-form-label">Enter your name:<span class="text-danger">*</span></label>
           <div class="col-md-8">
@@ -35,7 +33,6 @@
           </div>
         </div>
 
-        <!-- Password Field -->
         <div class="row align-items-center mb-3">
           <label for="password" class="col-md-4 col-form-label">Enter your password:<span class="text-danger">*</span></label>
           <div class="col-md-8">
@@ -43,7 +40,6 @@
           </div>
         </div>
 
-        <!-- Confirm Password Field -->
         <div class="row align-items-center mb-3">
           <label for="confirm-password" class="col-md-4 col-form-label">Confirm your password:<span class="text-danger">*</span></label>
           <div class="col-md-8">
@@ -51,7 +47,6 @@
           </div>
         </div>
 
-        <!-- Country Field -->
         <div class="row align-items-center mb-3">
           <label for="country" class="col-md-4 col-form-label">Country (optional):</label>
           <div class="col-md-8">
@@ -63,7 +58,6 @@
           </div>
         </div>
 
-        <!-- Gender Field -->
         <div class="row mb-3">
           <label class="col-md-4 col-form-label">Specify your gender:</label>
           <div class="col-md-8">
@@ -82,7 +76,6 @@
           </div>
         </div>
 
-        <!-- Birthdate Field -->
         <div class="row align-items-center mb-3">
           <label for="birthdate" class="col-md-4 col-form-label">Enter your birth date (optional):</label>
           <div class="col-md-8">
@@ -90,7 +83,6 @@
           </div>
         </div>
 
-        <!-- Phone Field -->
         <div class="row align-items-center mb-3">
           <label for="phone" class="col-md-4 col-form-label">Enter your phone number:</label>
           <div class="col-md-8">
@@ -98,7 +90,6 @@
           </div>
         </div>
 
-        <!-- Terms and Conditions Field -->
         <div class="row mb-3">
           <div class="col-md-4"></div>
           <div class="col-md-8">
@@ -106,7 +97,6 @@
               <input class="form-check-input" type="checkbox" id="terms" required>
               <label class="form-check-label" for="terms">
                 I agree to the terms 
-                <!-- Smaller button with modal trigger -->
                 <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#termsModal">
                   ?
                 </button>:<span class="text-danger">*</span>
@@ -118,7 +108,6 @@
           </div>
         </div>
         
-        <!-- Submit and Reset Buttons -->
         <div class="row">
           <div class="col-12 d-flex justify-content-between">
             <button type="submit" class="btn btn-primary">Submit</button>
@@ -129,7 +118,6 @@
     </div>
   </div>
 
-  <!-- Modal for Terms and Conditions -->
   <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -156,7 +144,6 @@
     </div>
   </div>
 
-  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 
   <script>
@@ -167,13 +154,11 @@
       var confirmPasswordField = document.getElementById("confirm-password");
   
       if (password !== confirmPassword) {
-        // If passwords don't match, highlight both fields in red
         passwordField.classList.add("invalid-field");
         confirmPasswordField.classList.add("invalid-field");
         passwordField.classList.remove("valid-field");
         confirmPasswordField.classList.remove("valid-field");
       } else {
-        // If passwords match, highlight both fields in green
         passwordField.classList.add("valid-field");
         confirmPasswordField.classList.add("valid-field");
         passwordField.classList.remove("invalid-field");
