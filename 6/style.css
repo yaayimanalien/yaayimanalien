@@ -154,19 +154,64 @@ footer:hover {
     gap: 10px;
     /* z-index: 2000; */
     background-color: rgba(0, 0, 0, 0.507);
-    padding: 10px;
+    /* padding: 10px; */
     border-radius: 8px;
     /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  */
     backdrop-filter: blur(5px);
+    scale: 80%;
 }
 
 .soc img {
-    width: 50px;
-    height: auto;
+    /* width: 50px; */
+    /* height: auto; */
     filter: grayscale(100%);
     transition: filter 0.3s ease;
+    /* display: block; */
 }
 
 .soc img:hover {
     filter: grayscale(0%);
+}
+
+.sprite {
+    width: 100px;
+    height: 100px;
+    /* overflow: hidden; */
+    scale: 50%;
+    transition: filter 0.3s ease;
+}
+
+#facebook {
+    background-image: url(social-icons-sprite.png);
+}
+
+#instagram {
+    background-image: url(social-icons-sprite.png);
+    background-position: -315px 0;
+}
+
+#tiktok {
+    background-image: url(social-icons-sprite.png);
+    background-position: -425px 0;
+}
+
+#twitter {
+    background-image: url(social-icons-sprite.png);
+    background-position: -210px 0;
+}
+
+#facebook:hover {
+    background-position: 0px -110px;
+}
+
+#instagram:hover {
+    background-position: -315px -110px;
+}
+
+#tiktok:hover {
+    background-position: -425px -110px;
+}
+
+#twitter:hover {
+    background-position: -210px -110px;
 }
