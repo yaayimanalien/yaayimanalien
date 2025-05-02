@@ -1,0 +1,342 @@
+@font-face {
+    font-family: 'Minecraft Seven v2';
+    src: url(/assets/fonts/minecraft-seven.otf) format('truetype');
+}
+@font-face {
+    font-family: 'Minecraft Ten v2';
+    src: url(/assets/fonts/minecraft-ten.otf) format('truetype');
+}
+
+html, body {
+    cursor: url("../assets/icons/cursor.png"), auto;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .cutscene-frame {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none;
+      z-index: -1;
+  }
+
+  .cutscene-frame.visible {
+      display: block;
+  }
+
+  .intro-container {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 80%;
+      /* right: 0; */
+      margin: 0;
+      padding: 0;
+      z-index: 1;
+      transform: translateY(-50%);
+      width: 100vw;
+      height: 100vh;
+      gap: 5px;
+  }
+
+.contacts-container {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+    z-index: 1;
+    /* width: 100vw; */
+    height: auto;
+    gap: 5px;
+}
+
+  .skills-container {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+    z-index: 1;
+    /* width: 100vw; */
+    height: auto;
+    gap: 5px;
+}
+
+.about-container {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    margin: 0;
+    padding: 0;
+    z-index: 5;
+    transform: translateY(-50%);
+    width: 100vw;
+    height: 100vh;
+}
+
+#about-heading {
+    width: 500px;
+    height: 50px;
+    /* background-color: red; */
+    /* margin: 30px; */
+    font-size: 60px;
+    font-family: Minecraft Ten v2;
+    color: white;
+    text-align: center;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+#about-to-main{
+    /* width: 500px;
+    height: 50px; */
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.intro-button {
+    background-image: url(../assets/icons/button/button.png);
+    background-size: cover;
+    width: 400px;
+    height: 40px;
+}
+
+.button-text {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    line-height: 40px;
+    font-family: Minecraft Seven v2;
+}
+
+.intro-button:hover {
+    background-image: url(../assets/icons/button/button-hover.png);
+}
+
+.intro-button:active {
+    background-image: url(../assets/icons/button/button-pressed.png);
+}
+
+.button-text:hover {
+    color: #fafb06;
+}
+
+#loading-bar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 5px;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    display: block;
+  }
+  
+  #loading-bar {
+    width: 0%;
+    height: 100%;
+    background-image: linear-gradient(to right, red , yellow);
+    transition: width 0.2s ease;
+  }
+
+  .hover1{
+    background-color: red;
+    width: 100px; height: 100px;
+    position: absolute;
+    /* top: 50%; */
+    right: 180px;
+    bottom: 300px;
+    /* left: 50%; */
+    z-index: 1000;
+  }
+
+  .image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    
+    z-index: 1011;
+  }
+  
+  .image-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+  }
+  
+  .overlay-skills {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    /* background-color: red; */
+    z-index: 10;
+    display: none;
+  }
+  
+  .mc-tooltip {
+    display: none;
+    /* align-items: center; */
+    padding: 8px;
+    width: max-content;
+    max-width: 300px;
+    border: 8px solid transparent;
+    border-image: url('../assets/icons/tooltip.png') 4 stretch;
+    image-rendering: pixelated;
+    font-family: 'Minecraft Seven v2', sans-serif;
+    font-size: 14px;
+    color: white;
+    background-color: rgba(16, 16, 16, 0.9);
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 11;
+    border-radius: 20px;
+  }
+  
+  .mc-icon {
+    width: 32px;
+    height: 32px;
+    image-rendering: pixelated;
+    margin-right: 10px;
+  }
+  
+  .mc-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .mc-text .line1 {
+    font-weight: bold;
+  }
+  
+  .mc-text .line2 {
+    color: #5555FF;
+  }
+  
+  #python-icon {
+    top: 47%;
+    left: 30%;
+    width: 120px;
+    height: 150px;
+  }
+  #python-tooltip {
+    top: 60%;
+    left: 30%;
+  }
+  
+  #csharp-icon {
+    top: 50%;
+    left: 37.7%;
+    width: 95px;
+    height: 120px;
+  }
+  #csharp-tooltip {
+    top: 60%;
+    left: 36.5%;
+    /* transform: translateX(-50%); */
+  }
+  
+  #ableton-icon {
+    top: 51%;
+    left: 43%;
+    width: 88px;
+    height: 100px;
+  }
+  #ableton-tooltip {
+    top: 60%;
+    left: 48%;
+    transform: translateX(-50%);
+  }
+  
+  .overlay-skills:hover + .mc-tooltip {
+    display: flex;
+  }
+  
+
+  #heading {
+    font-family: Minecraft Ten v2;
+    font-size: 100px;
+    color: white;
+    text-align: center;
+    padding: 0;
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+
+  #heading1 h1 {
+    
+    color: red;
+  }
+
+  .overlay-contacts {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    z-index: 10;
+    display: none;
+  }
+
+  #twitter {
+    top: 55%;
+    left: 32%;
+    width: 140px;
+    height: 280px;
+    /* background-color: red; */
+  }
+
+  #email {
+    /* background-color: gray; */
+    top: 54%;
+    left: 46%;
+    width: 130px;
+    height: 250px;
+  }
+
+  #github {
+    /* background-color: blue; */
+    top: 51%;
+    left: 58%;
+    width: 180px;
+    height: 350px;
+  }

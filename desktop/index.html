@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+    </script>
+</head>
+<body>
+    <!-- UI -->
+
+    <div id="loading-bar-container">
+        <div id="loading-bar"></div>
+      </div>
+      
+
+    <!-- MAIN PAGE -->
+
+    <div class="intro-container">
+      <h1 id="heading">PORTFOLIO</h1>
+        <div class="intro-button" id="to-about">
+            <div class="button-text">About</div>
+        </div>
+        <div class="intro-button" id="to-skillset">
+            <div class="button-text">My skills</div>
+        </div>
+        <div class="intro-button" id="to-contacts">
+            <div class="button-text">Contacts</div>
+        </div>
+     </div>
+
+     <!-- ABOUT PAGE -->
+
+     <div class="about-container">
+        <h1 id="about-heading">ABOUT ME</h1>
+        <div style="display: flex; align-items: center; justify-content: center; height: 100%;">
+            <p style="z-index: 11; color: yellow; font-family: Minecraft Seven v2; text-align: center; font-size: 30px; margin: 30px;">Hi, I'm Reinis, a student from Latvia with passion for tech, software and music. Currently studying at LBTU, I wish to become a software engineer one day. I'm interested in developing music software, as that combines my two biggest interests. However, I'm always eager to learn more and collaborate on cool projects!</p>
+        </div>
+        <div class="intro-button" id="about-to-main">
+            <div class="button-text">Back to main</div>
+        </div>
+    </div>
+
+    <div class="contacts-container">
+        <div class="intro-button" id="contacts-to-main">
+            <div class="button-text">Back to main</div>
+        </div>
+    </div>
+
+    <div class="overlay-contacts" id="twitter"></div>
+    <div class="overlay-contacts" id="email"></div>
+    <div class="overlay-contacts" id="github"></div>
+
+    <!-- <div class="skills-overlay"> -->
+        <!-- <div class="ableton">
+            <img src="icons/ableton.png" alt="Ableton" class="icon">
+            <p style="color: white;">sample text</p>
+        </div> -->
+
+        <!-- PYTHON -->
+      <div class="overlay-skills" id="python-icon"></div>
+      <div class="mc-tooltip" id="python-tooltip">
+        <img class="mc-icon" src="../assets/icons/py.png">
+        <div class="mc-text">
+          <div class="line1">Python</div>
+          <div class="line2">Programming language</div>
+        </div>
+      </div>
+
+      <!-- C# -->
+      <div class="overlay-skills" id="csharp-icon"></div>
+      <div class="mc-tooltip" id="csharp-tooltip">
+        <img class="mc-icon" src="../assets/icons/csh.png">
+        <div class="mc-text">
+          <div class="line1">C#</div>
+          <div class="line2">Programming language</div>
+        </div>
+      </div>
+
+      <!-- Ableton -->
+      <div class="overlay-skills" id="ableton-icon"></div>
+      <div class="mc-tooltip" id="ableton-tooltip">
+        <img class="mc-icon" src="../assets/icons/ableton.png">
+        <div class="mc-text">
+          <div class="line1">Ableton Live</div>
+          <div class="line2">Music production software</div>
+        </div>
+      </div>
+
+        <div class="skills-container">
+            <!-- <div class="skills-button" id="skills-to-main"></div> --> 
+            <div class="intro-button" id="skills-to-main">
+                <div class="button-text">Back to main</div>
+            </div>
+        </div>
+
+
+    <!-- INTRO FRAMES -->
+    <img rel="preload" src="../assets/animations/intro/0001.webp" id="intro01" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/intro/0002.webp" id="intro02" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/intro/0003.webp" id="intro03" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/intro/0004.webp" id="intro04" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/intro/0005.webp" id="intro05" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/intro/0006.webp" id="intro06" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/intro/0007.webp" id="intro07" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/intro/0008.webp" id="intro08" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/intro/0009.webp" id="intro09" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/intro/0010.webp" id="intro10" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/intro/0011.webp" id="intro11" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/intro/0012.webp" id="intro12" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/intro/0013.webp" id="intro13" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/intro/0014.webp" id="intro14" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/intro/0015.webp" id="intro15" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/intro/0016.webp" id="intro16" class="cutscene-frame">
+
+    <!-- SKILLS PAGE FRAMES -->
+    <img rel="preload" src="../assets/animations/skills/0001.webp" id="skills01" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/skills/0002.webp" id="skills02" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/skills/0003.webp" id="skills03" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/skills/0004.webp" id="skills04" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/skills/0005.webp" id="skills05" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/skills/0006.webp" id="skills06" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/skills/0007.webp" id="skills07" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/skills/0008.webp" id="skills08" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/skills/0009.webp" id="skills09" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/skills/0010.webp" id="skills10" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/skills/0011.webp" id="skills11" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/skills/0012.webp" id="skills12" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/skills/0013.webp" id="skills13" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/skills/0014.webp" id="skills14" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/skills/0015.webp" id="skills15" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/skills/0016.webp" id="skills16" class="cutscene-frame">
+
+    <!-- ABOUT PAGE FRAMES -->
+    <img rel="preload" src="../assets/animations/about/0001.webp" id="about01" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/about/0002.webp" id="about02" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/about/0003.webp" id="about03" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/about/0004.webp" id="about04" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/about/0005.webp" id="about05" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/about/0006.webp" id="about06" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/about/0007.webp" id="about07" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/about/0008.webp" id="about08" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/about/0009.webp" id="about09" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/about/0010.webp" id="about10" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/about/0011.webp" id="about11" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/about/0012.webp" id="about12" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/about/0013.webp" id="about13" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/about/0014.webp" id="about14" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/about/0015.webp" id="about15" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/about/0016.webp" id="about16" class="cutscene-frame">
+
+    <!-- CONTACTS PAGE FRAMES -->
+    <img rel="preload" src="../assets/animations/contacts/0001.webp" id="contacts01" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/contacts/0002.webp" id="contacts02" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/contacts/0003.webp" id="contacts03" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/contacts/0004.webp" id="contacts04" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/contacts/0005.webp" id="contacts05" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/contacts/0006.webp" id="contacts06" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/contacts/0007.webp" id="contacts07" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/contacts/0008.webp" id="contacts08" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/contacts/0009.webp" id="contacts09" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/contacts/0010.webp" id="contacts10" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/contacts/0011.webp" id="contacts11" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/contacts/0012.webp" id="contacts12" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/contacts/0013.webp" id="contacts13" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/contacts/0014.webp" id="contacts14" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/contacts/0015.webp" id="contacts15" class="cutscene-frame">
+    <img rel="preload" src="../assets/animations/contacts/0016.webp" id="contacts16" class="cutscene-frame">
+    
+    <audio id="audio" src="/assets/sound/minecraft_click.mp3"></audio>
+</body>
+</html>
