@@ -220,7 +220,9 @@
         document.getElementById('contacts-to-main').addEventListener('click', () => {
           document.getElementById("audio").play();
           document.querySelector('.contacts-container').style.display = 'none';
-          
+          document.querySelectorAll('.overlay-contacts').forEach(el => {
+            el.style.display = 'none';
+          });
           playCutsceneReverse({
             prefix: 'contacts',
             totalFrames: 16,
