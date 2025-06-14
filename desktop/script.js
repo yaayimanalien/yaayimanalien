@@ -1,23 +1,3 @@
-(function() {
-    if (!document.getElementById('loading-bar-container')) {
-      const loadingBarContainer = document.createElement('div');
-      loadingBarContainer.id = 'loading-bar-container';
-      
-      const loadingBar = document.createElement('div');
-      loadingBar.id = 'loading-bar';
-      
-      loadingBarContainer.appendChild(loadingBar);
-      
-      if (document.body) {
-        document.body.insertBefore(loadingBarContainer, document.body.firstChild);
-      } else {
-        document.addEventListener('DOMContentLoaded', () => {
-          document.body.insertBefore(loadingBarContainer, document.body.firstChild);
-        });
-      }
-    }
-  })();
-  
   let lastPlayedCutscene = null;
   let currentImage = 1;
   let animationInterval = null;
@@ -220,6 +200,9 @@
         document.getElementById('contacts-to-main').addEventListener('click', () => {
           document.getElementById("audio").play();
           document.querySelector('.contacts-container').style.display = 'none';
+          document.querySelectorAll('.overlay-contacts').forEach(el => {
+            el.style.display = 'none';
+          });
           
           playCutsceneReverse({
             prefix: 'contacts',
@@ -276,5 +259,58 @@
 
     document.getElementById('twitter').addEventListener('click', () => {
       window.open("https://x.com/username", "_blank");
+    });
+
+    // Minecraft-style tooltip logic for skill icons
+    const skillIcons = document.querySelectorAll('.overlay-skills');
+
+    function positionTooltip(event, tooltipElement) {
+      if (tooltipElement.style.display !== 'flex') return; // Ensure calculations are done only if visible
+
+      const tooltipWidth = tooltipElement.offsetWidth;
+      const tooltipHeight = tooltipElement.offsetHeight;
+
+      const offsetX = 15; // pixels to the right of cursor
+      const offsetY = 15; // pixels below cursor
+
+      let x = event.clientX + offsetX;
+      let y = event.clientY + offsetY;
+
+      // Boundary checks to keep tooltip within the viewport
+      if (x + tooltipWidth > window.innerWidth) {
+        x = event.clientX - tooltipWidth - offsetX; // Place to the left of cursor
+      }
+      if (x < 0) {
+        x = 5; // Small margin from left edge if still out of bounds
+      }
+
+      if (y + tooltipHeight > window.innerHeight) {
+        y = event.clientY - tooltipHeight - offsetY; // Place above cursor
+      }
+      if (y < 0) {
+        y = 5; // Small margin from top edge if still out of bounds
+      }
+
+      tooltipElement.style.left = `${x}px`;
+      tooltipElement.style.top = `${y}px`;
+    }
+
+    skillIcons.forEach(iconEl => {
+      const tooltipEl = iconEl.nextElementSibling;
+
+      if (tooltipEl && tooltipEl.classList.contains('mc-tooltip')) {
+        iconEl.addEventListener('mouseenter', (e) => {
+          tooltipEl.style.display = 'flex';
+          positionTooltip(e, tooltipEl); // Initial position update
+        });
+
+        iconEl.addEventListener('mousemove', (e) => {
+          positionTooltip(e, tooltipEl);
+        });
+
+        iconEl.addEventListener('mouseleave', () => {
+          tooltipEl.style.display = 'none';
+        });
+      }
     });
   })

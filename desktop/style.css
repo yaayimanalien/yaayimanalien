@@ -257,8 +257,8 @@ html, body {
     height: 150px;
   }
   #python-tooltip {
-    top: 60%;
-    left: 30%;
+    /* top: 60%; */
+    /* left: 30%; */
   }
   
   #csharp-icon {
@@ -268,8 +268,8 @@ html, body {
     height: 120px;
   }
   #csharp-tooltip {
-    top: 60%;
-    left: 36.5%;
+    /* top: 60%; */
+    /* left: 36.5%; */
     /* transform: translateX(-50%); */
   }
   
@@ -280,14 +280,14 @@ html, body {
     height: 100px;
   }
   #ableton-tooltip {
-    top: 60%;
-    left: 48%;
-    transform: translateX(-50%);
+    /* top: 60%; */
+    /* left: 48%; */
+    /* transform: translateX(-50%); */
   }
   
-  .overlay-skills:hover + .mc-tooltip {
+  /* .overlay-skills:hover + .mc-tooltip {
     display: flex;
-  }
+  } */
   
 
   #heading {
