@@ -1,21 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Portfolio</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script>
-function redirectBasedOnDevice() {
-  
-  if (window.innerWidth <= 768) {
-    window.location.href = 'mobile';
-  } else {
-    window.location.href = 'desktop';
-  }
-}
-document.addEventListener('DOMContentLoaded', redirectBasedOnDevice);
-    </script>
+	
+	
+	<div class="loading-container">
+		<!-- <div class="loading-text">Loading...</div> -->
+		<img src="assets/icons/loading.webp" id="loading-circle">
+		<div class="loading-percentage">0%</div>
+	</div>
+	
+	<!-- <div class="a"> -->
+		<div class="blur-container blur-container-long">
+			<!-- INTRO FRAMES -->
+			<!-- <img src="assets/animations/intro/0001.webp" id="background"> -->
+			<img rel="preload" src="assets/animations/intro/0001.webp" id="intro01" class="animation-frame">
+			<img rel="preload" src="assets/animations/intro/0002.webp" id="intro02" class="animation-frame">
+			<img rel="preload" src="assets/animations/intro/0003.webp" id="intro03" class="animation-frame">
+			<img rel="preload" src="assets/animations/intro/0004.webp" id="intro04" class="animation-frame">
+			<img rel="preload" src="assets/animations/intro/0005.webp" id="intro05" class="animation-frame">
+			<img rel="preload" src="assets/animations/intro/0006.webp" id="intro06" class="animation-frame">
+			<img rel="preload" src="assets/animations/intro/0007.webp" id="intro07" class="animation-frame">
+			<img rel="preload" src="assets/animations/intro/0008.webp" id="intro08" class="animation-frame">
+			<img rel="preload" src="assets/animations/intro/0009.webp" id="intro09" class="animation-frame">
+			<img rel="preload" src="assets/animations/intro/0010.webp" id="intro10" class="animation-frame">
+			<img rel="preload" src="assets/animations/intro/0011.webp" id="intro11" class="animation-frame">
+			<img rel="preload" src="assets/animations/intro/0012.webp" id="intro12" class="animation-frame">
+			<img rel="preload" src="assets/animations/intro/0013.webp" id="intro13" class="animation-frame">
+			<img rel="preload" src="assets/animations/intro/0014.webp" id="intro14" class="animation-frame">
+			<img rel="preload" src="assets/animations/intro/0015.webp" id="intro15" class="animation-frame">
+			<img rel="preload" src="assets/animations/intro/0016.webp" id="intro16" class="animation-frame">
+			
+			<div class="main-menu">
+				<div id="header">
+					<h1>PORTFOLIO</h1>
+				</div>
+				<div class="menu">
+					<div class="menu-item" id="button-about">About</div>
+					<div class="menu-item" id="button-skills">Skills</div>
+					<div class="menu-item" id="button-projects">Projects</div>
+					<div class="menu-item" id="button-contacts">Contacts</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+	<!-- </div> -->
+	
+	<div class="dialog about" id="about-dialog">
+		<div class="dialog-header">
+			<h2>About Me</h2>
+		</div>
+		<div class="dialog-content">
+			<b>Who am I?</b>
+			<ul>
+				<li>Name: Reinis</li>
+				<li>Age: 21</li>
+				<li>Location: Latvia</li>
+				<li>Student at Latvia University of Live Sciences and Technologies</li>
+			</ul>
+			<b>My interests include:</b>
+			<ul>
+				<li>Minecraft!</li>
+				<li>Music production</li>
+				<li>DJing</li>
+				<li>Computer science</li>
+				<li>Software development</li>
+			</ul>
+		</div>
+		<button>CLOSE</button>
+	</div>
+	
+	<div class="dialog skills" id="skills-dialog">
+		<div class="dialog-header">
+			<h2>Skills</h2>
+		</div>
+		<div class="dialog-content-container">
+			<div class="dialog-content">
+				<div class="item-container">
+					<img class="icon" src="assets/icons/ableton.png" alt="">
+					<div class="skill-text-container">
+						<span class="skill-text">Ableton Live</span>
+						<span class="skill-caption">Music production software</span>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="dialog-content-container"> -->
+				<div class="dialog-content">
+					<div class="item-container">
+						<img class="icon" src="assets/icons/py.png" alt="">
+						<div class="skill-text-container">
+							<span class="skill-text">Python</span>
+							<span class="skill-caption">Programming language</span>
+						</div>
+					</div>
+				</div>
+				<div class="dialog-content">
+					<div class="item-container">
+						<img class="icon" src="assets/icons/csh.png" alt="">
+						<div class="skill-text-container">
+							<span class="skill-text">C#</span>
+							<span class="skill-caption">Programming language</span>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+			<button>CLOSE</button>
+		</div>
+	</div>
+	
+	<div class="dialog projects" id="projects-dialog">
+		<div class="dialog-header">
+			<h2>Projects</h2>
+		</div>
+		<div class="dialog-content">
+			<img src="assets/icons/spiderweb.webp" alt="">
+			<span>Nothing here... yet!</span>
+		</div>
+		<button>CLOSE</button>
+	</div>
+	
+	<div class="dialog contacts" id="contacts-dialog">
+		<div class="dialog-header">
+			<h2>Contacts</h2>
+		</div>
+		<div class="dialog-content-container">
+			<div class="dialog-content">
+				<div class="item-container">
+					<img class="icon" src="assets/icons/twitter.png" alt="">
+					<div class="contact-text-container">
+						<span class="contact-text">Twitter</span>
+						<span class="contact-caption">@username</span>
+					</div>
+					<div class="contact-button" id="button-x">Open</div>
+				</div>
+			</div>
+			<div class="dialog-content">
+				<div class="item-container">
+					<img class="icon" src="assets/icons/email-small.png" alt="">
+					<div class="contact-text-container">
+						<span class="contact-text">Email</span>
+						<span class="contact-caption">email@email.com</span>
+					</div>
+					<div class="contact-button" id="button-email">Copy</div>
+				</div>
+			</div>
+			<div class="dialog-content">
+				<div class="item-container">
+					<img class="icon" src="assets/icons/github.png" alt="">
+					<div class="contact-text-container">
+						<span class="contact-text">GitHub</span>
+						<span class="contact-caption">@username</span>
+					</div>
+					<div class="contact-button" id="button-github">Open</div>
+				</div>
+			</div>
+		</div>
+		<button>CLOSE</button>
+	</div>
+	
+	<script src="script.js"></script>
 </body>
 </html>
